@@ -12,6 +12,9 @@
     "jongotlin/arbetsformedlingen-ads": "^1.0",
     "symfony/framework-bundle": "^3.0"
   },
+  "require-dev": {
+    "php-http/guzzle6-adapter": "^1.1"
+  },
   "autoload": {
     "psr-4": {
       "JGI\\ArbetsformedlingenAdsBundle\\": "src/"
