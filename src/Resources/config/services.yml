@@ -1,0 +1,8 @@
+services:
+  JGI\ArbetsformedlingenAds\Client:
+    class: JGI\ArbetsformedlingenAds\Client
+
+  JGI\ArbetsformedlingenAdsBundle\Listener\LoggerListener:
+    class: JGI\ArbetsformedlingenAdsBundle\Listener\LoggerListener
+    tags:
+      - { name: kernel.event_listener, event: arbetsformedlingen_ads.result, method: whenResultIsReturned }
