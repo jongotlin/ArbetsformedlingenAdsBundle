@@ -6,3 +6,11 @@ services:
     class: JGI\ArbetsformedlingenAdsBundle\Listener\LoggerListener
     tags:
       - { name: kernel.event_listener, event: arbetsformedlingen_ads.result, method: whenResultIsReturned }
+
+
+  JGI\ArbetsformedlingenAdsBundle\Command\TestingProcedureCommand:
+    class: JGI\ArbetsformedlingenAdsBundle\Command\TestingProcedureCommand
+    arguments:
+      - '@JGI\ArbetsformedlingenAds\Client'
+    tags:
+      - { name: console.command }
