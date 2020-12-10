@@ -13,8 +13,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $root = $treeBuilder->root('arbetsformedlingen_ads');
+        $treeBuilder = new TreeBuilder('arbetsformedlingen_ads');
+        $root = $treeBuilder->getRootNode();
 
         $loggersNode = new ArrayNodeDefinition('loggers');
         $loggersNode->prototype('scalar')->end();
